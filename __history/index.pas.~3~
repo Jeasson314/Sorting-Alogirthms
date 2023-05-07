@@ -1,0 +1,52 @@
+unit index;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls;
+
+type
+  TForm2 = class(TForm)
+    btnStart: TButton;
+    redout: TRichEdit;
+    lblArrSize: TLabel;
+    ListBox1: TListBox;
+    edtLength: TEdit;
+    Button1: TButton;
+    procedure btnStartClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+  arrValues: Array of Integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.btnStartClick(Sender: TObject);
+var iLoop : Integer;
+begin
+  SetLength(arrValues, StrToInt(edtLength.Text));
+  for iLoop := 0 to length(arrValues)-1 do
+    arrValues[iLoop] := Random(100);
+
+
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+var iLoop : Integer;
+begin
+  redout.Clear;
+  for iLoop := 0 to length(arrValues)-1 do
+    redout.Lines.Add(IntToStr(arrValues[iLoop]));
+
+end;
+
+end.

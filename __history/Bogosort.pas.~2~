@@ -1,0 +1,22 @@
+unit Bogosort;
+
+interface
+type TIntegerArray = Array of Integer;
+function Sort(arrInput: TIntegerArray): TIntegerArray;
+
+implementation
+
+function Sort(arrInput: TIntegerArray): TIntegerArray;
+var ilength,i,j,a,b,pos,temp:integer;
+    sorted:boolean;
+begin
+  for i := 0 to length(arrInput)-1 do
+    for j := 0 to length(arrInput) do
+      if arrInput[i] > arrInput[j] then
+       sorted:=false
+       else
+
+  result:= arrInput;
+end;
+
+end.

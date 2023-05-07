@@ -1,0 +1,75 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 626
+  ClientWidth = 805
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblArrSize: TLabel
+    Left = 144
+    Top = 29
+    Width = 49
+    Height = 13
+    Caption = 'Array Size'
+  end
+  object btnLoad: TButton
+    Left = 24
+    Top = 46
+    Width = 75
+    Height = 25
+    Caption = 'Load Array'
+    TabOrder = 0
+    OnClick = btnLoadClick
+  end
+  object redout: TRichEdit
+    Left = 24
+    Top = 192
+    Width = 305
+    Height = 345
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Lines.Strings = (
+      'redout')
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 1
+  end
+  object ListBox1: TListBox
+    Left = 344
+    Top = 29
+    Width = 121
+    Height = 89
+    ItemHeight = 13
+    TabOrder = 2
+  end
+  object btnSort: TButton
+    Left = 24
+    Top = 120
+    Width = 305
+    Height = 25
+    Caption = 'Sort Array'
+    TabOrder = 3
+    OnClick = btnSortClick
+  end
+  object edtLength: TSpinEdit
+    Left = 144
+    Top = 48
+    Width = 121
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 4
+    Value = 0
+  end
+end

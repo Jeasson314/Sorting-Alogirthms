@@ -1,0 +1,72 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 626
+  ClientWidth = 805
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblArrSize: TLabel
+    Left = 144
+    Top = 29
+    Width = 49
+    Height = 13
+    Caption = 'Array Size'
+  end
+  object btnStart: TButton
+    Left = 24
+    Top = 46
+    Width = 75
+    Height = 25
+    Caption = 'btnStart'
+    TabOrder = 0
+    OnClick = btnStartClick
+  end
+  object redout: TRichEdit
+    Left = 40
+    Top = 192
+    Width = 185
+    Height = 345
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Lines.Strings = (
+      'redout')
+    ParentFont = False
+    TabOrder = 1
+  end
+  object ListBox1: TListBox
+    Left = 352
+    Top = 112
+    Width = 121
+    Height = 89
+    ItemHeight = 13
+    TabOrder = 2
+  end
+  object edtLength: TEdit
+    Left = 144
+    Top = 48
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    Text = 'edtLength'
+  end
+  object Button1: TButton
+    Left = 24
+    Top = 120
+    Width = 305
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 4
+    OnClick = Button1Click
+  end
+end

@@ -1,0 +1,23 @@
+unit James;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs,index;
+
+type
+  TForm1 = class(TForm)
+  private
+    function sort[arrInput: array of integer]:array of integer;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+{$R *.dfm}
+
+end.

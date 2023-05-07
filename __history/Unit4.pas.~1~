@@ -1,0 +1,39 @@
+unit Unit4;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm4 = class(TForm)
+    Button1: TButton;
+    Edit1: TEdit;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+var arrValue:array of integer;
+procedure TForm4.Button1Click(Sender: TObject);
+var length:integer;
+    pos:integer;
+begin
+pos:=0;
+length:=strtoint(edit1.Text);
+setlength(arrValue,strtoint(edit1.text));
+while not pos=length do
+arrValue[pos]:=random(10000);
+inc(pos)
+end;
+
+end.

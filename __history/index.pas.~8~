@@ -1,0 +1,90 @@
+unit index;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls, Spin, ExtCtrls, pngimage;
+
+type
+  TForm2 = class(TForm)
+    btnLoad: TButton;
+    redout: TRichEdit;
+    lblArrSize: TLabel;
+    lstOptions: TListBox;
+    btnSort: TButton;
+    spnLength: TSpinEdit;
+    imgBackground: TImage;
+    Button1: TButton;
+    procedure btnLoadClick(Sender: TObject);
+    procedure btnSortClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+  arrValues: Array of Integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.btnLoadClick(Sender: TObject);
+var iLoop : Integer;
+begin
+  SetLength(arrValues, spnLength.Value);
+  for iLoop := 0 to length(arrValues)-1 do
+    arrValues[iLoop] := Random(100);
+
+
+end;
+
+procedure TForm2.btnSortClick(Sender: TObject);
+var ilength,a,b,pos,temp:integer;
+    sort:boolean;
+begin
+sort:=false;
+repeat
+begin
+ ilength:=length(arrValues);
+for pos := 0 to  ilength-1 do
+  begin
+    if arrValues[pos]<arrValues[pos+1] then
+     sort:=true
+     else
+     sort:=false;
+     break
+  end;
+if sort=false then
+   for  pos:= 0 to ilength-1 do
+     begin
+     a:=random(ilength);
+     b:=random(ilength);
+     if not a=b then
+      temp:=arrValues[a];
+      arrValues[a]:=arrValues[b];
+      arrValues[b]:=temp;
+      end;
+end;
+until (sort=true);
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+var pos:integer;
+
+begin
+for pos := 0 to length(arrValues)-1 do
+    redout.Lines.Add(IntToStr(arrValues[pos]));
+end;
+
+procedure TForm2.FormActivate(Sender: TObject);
+begin
+ //lstOptions.Items.Add();
+end;
+
+end.

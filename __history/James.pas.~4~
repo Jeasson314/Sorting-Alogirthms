@@ -1,0 +1,47 @@
+unit James;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs,index;
+
+type
+  TForm1 = class(TForm)
+  private
+  public
+   procedure Bogosort();
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+{$R *.dfm}
+{ TForm1 }
+
+procedure TForm1.Bogosort;
+var ilength,a,b,pos,temp:integer;
+    sort:boolean;
+begin
+ilength:=length(arrValues);
+for pos := 0 to  ilength-1 do
+  begin
+    if arrValues[pos]<arrValues[pos+1] then
+     sort:=true
+     else
+     sort:=false;
+     break
+  end;
+if sort=false then
+   for  pos:= 0 to ilength-1 do
+     begin
+     a:=random(ilength);
+     b:=random(ilength);
+
+      temp:=arrValues[random(ilength)]
+
+     end;
+end;
+
+end.
