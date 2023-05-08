@@ -16,13 +16,11 @@ max:=length(arrInput);
   for i := max downto 2 do begin
      k := random(i) + 1;
      if (arrInput[i] <> arrInput[k]) then begin
-       tmp := arrInput[i];
-       arrInput[i] := arrInput[k];
-       arrInput[k] := tmp ;
+       tmp := arrInput[i]; arrInput[i] := arrInput[k]; arrInput[k] := tmp
 
-     end;//showmessage('2');
+     end;
   end;
-showmessage(inttostr(arrInput[1]));
+showmessage('2');
 end;
 function sorted(arrInput:TIntegerArray): boolean;
 var
@@ -34,27 +32,17 @@ max:=length(arrInput);
     if (arrInput[i - 1] > arrInput[i]) then begin
       sorted := False; exit
     end;
-
-    //showmessage('3');
+    showmessage('3');
 end;
 function Sort(arrInput: TIntegerArray): TIntegerArray;
 var
   i: integer;
-  sorts:boolean;
 begin
-
-  sorts:=false;
   i := 1; randomize;
-     //ShowMessage('1');
-  while sorts=false do begin
-    if not sorted(arrInput)=true then
-       sorts:=false;
+     ShowMessage('1');
+  while not sorted(arrInput)=true do begin
     shuffle(arrInput);
-    if sorted(arrInput)=true then
-    sorts:=true
-
 end;
-showmessage(inttostr(arrInput[1]));
    result := arrInput;
 end;
 

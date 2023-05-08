@@ -38,7 +38,7 @@ var iLoop : Integer;
 begin
   SetLength(arrValues, spnLength.Value);
   for iLoop := 0 to length(arrValues)-1 do
-    arrValues[iLoop] := Random(1000);
+    arrValues[iLoop] := Random(100);
 
 
 end;
@@ -48,8 +48,8 @@ var iLoop : Integer;
 begin
   arrvalues:=bogosort.Sort(arrValues);
   redout.Clear;
-  for iLoop := 0 to length(arrvalues)-1 do
-    redout.Lines.Add(IntToStr(arrvalues[iLoop]));
+  for iLoop := 0 to length(arrValues)-1 do
+    redout.Lines.Add(IntToStr(arrValues[iLoop]));
 end;
 
 procedure TForm2.Button1Click(Sender: TObject);

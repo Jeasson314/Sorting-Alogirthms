@@ -46,9 +46,6 @@
 			<DCCReference Include="index.pas">
 				<Form>Form2</Form>
 			</DCCReference>
-			<DCCReference Include="James.pas">
-				<Form>Form1</Form>
-			</DCCReference>
 			<DCCReference Include="Bogosort.pas"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
