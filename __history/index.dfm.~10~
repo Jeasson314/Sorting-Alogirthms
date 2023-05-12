@@ -424,6 +424,8 @@ object Form2: TForm2
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    Lines.Strings = (
+      'redout')
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 1
@@ -463,6 +465,6 @@ object Form2: TForm2
     MaxValue = 0
     MinValue = 0
     TabOrder = 5
-    Value = 100
+    Value = 0
   end
 end

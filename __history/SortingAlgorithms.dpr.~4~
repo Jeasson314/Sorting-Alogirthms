@@ -3,14 +3,14 @@ program SortingAlgorithms;
 uses
   Forms,
   index in 'index.pas' {Form2},
-  Bogosort in 'Algorithms\Bogosort.pas',
-  translater in 'Algorithms\translater.pas';
+  Bogosort_old in 'Bogosort_old.pas',
+  Bogosort in 'Algorithms\Bogosort.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm2, Form2);
-  Application.Run;
+  AApplication.CreateForm(TForm2, Form2);
+  pplication.Run;
 end.

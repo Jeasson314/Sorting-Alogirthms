@@ -1,4 +1,4 @@
-unit Bogosort;
+unit Bogosort_old;
 
 interface
  uses Dialogs, index;

@@ -71,6 +71,5 @@ begin
   for i := 1 to self.max do
     a[i] := arrInput[i];
   bogo(a);
-  result := a;
 end;
 end.

@@ -1,42 +1,40 @@
 unit Bogosort;
 
 interface
-type TIntegerArray = Array of Integer;
+uses index;
+function Sort(arrInput: index.TIntegerArray): index.TIntegerArray;
 
-function Sort(arrInput: TIntegerArray): TIntegerArray;
 implementation
-procedure shuffle(arrInput:TIntegerArray);
-var
-  i,k,tmp,max: integer;
+
+function Sort(arrInput: index.TIntegerArray): index.TIntegerArray;
+var iLoop,i,j,b,a,pos,temp: Integer;
+    sorted: Boolean;
 begin
-max:=length(arrInput);
-  for i := max downto 2 do begin
-     k := random(i) + 1;
-     if (arrInput[i] <> arrInput[k]) then begin
-       tmp := arrInput[i]; arrInput[i] := arrInput[k]; arrInput[k] := tmp
-     end
-  end
-end;
-function sorted(arrInput:TIntegerArray): boolean;
-var
-  max,i: integer;
+repeat
+for  iLoop := 0 to length(arrInput) - 1 do
+    begin
+    a := random(length(arrInput));
+    b := random(length(arrInput));
+    if not a=b then
+    temp := arrInput[a];
+    arrInput[a] := arrInput[b];
+    arrInput[b] := temp;
+    end;
+for i := 0 to length(arrInput)-1 do
 begin
-max:=length(arrInput);
-  sorted := True;
-  for i := 2 to max do
-    if (arrInput[i - 1] > arrInput[i]) then begin
-      sorted := False; exit
-    end
+  for j := 0 to length(arrInput) do
+      begin
+     if arrInput[i] > arrInput[j] then begin
+       sorted:=false;
+       index.TForm2.redout.Lines.Add('Did not work!');
+     end
+       else sorted:=true;
+      end;
 end;
-function Sort(arrInput: TIntegerArray): TIntegerArray;
-var
-  i: integer;
-begin
-  i := 1; randomize;
-  while not sorted(arrInput) do begin
-    shuffle(arrInput);
-end;
-   result := arrInput;
+until sorted=true;
+
+
+  result:= arrInput;
 end;
 
 end.

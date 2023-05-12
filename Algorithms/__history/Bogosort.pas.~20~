@@ -1,7 +1,7 @@
 unit Bogosort;
 
 interface
- uses SysUtils, translater, dialogs;
+ uses SysUtils, translater;
  type Sorting = class
  private
   max : Integer;
@@ -28,7 +28,6 @@ begin
   //index.Form2.redout.Lines.Add(IntToStr(i)+': '+ Sorting.printa(a));
   while not self.sorted(a) do begin
     self.shuffle(a);
-    showmessage('not sorted');
     //i := i + 1; index.Form2.redout.Lines.Add(IntToStr(i)+': '+ Sorting.printa(a));
   end
 end;
@@ -63,14 +62,13 @@ begin
   end
 end;
 function Sorting.Sort(arrInput: TIntegerArray): TIntegerArray;
-var i: integer;
-    a: translater.TIntegerArray;
+var
+  a: index.TIntegerArray;
+  i: integer;
 begin
-  showMessage('started sort');
   self.max := length(arrInput);
   for i := 1 to self.max do
     a[i] := arrInput[i];
   bogo(a);
-  result := a;
 end;
 end.

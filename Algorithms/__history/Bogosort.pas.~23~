@@ -12,7 +12,7 @@ interface
   procedure bogo(var a: TIntegerArray); { Bogosort }
 
  public
-
+ a: translater.TIntegerArray;
  function Sort(arrInput: TIntegerArray): TIntegerArray;
 
  end;
@@ -63,14 +63,12 @@ begin
   end
 end;
 function Sorting.Sort(arrInput: TIntegerArray): TIntegerArray;
-var i: integer;
-    a: translater.TIntegerArray;
+var
+  i: integer;
 begin
-  showMessage('started sort');
   self.max := length(arrInput);
   for i := 1 to self.max do
     a[i] := arrInput[i];
   bogo(a);
-  result := a;
 end;
 end.

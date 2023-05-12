@@ -2,6 +2,7 @@ unit Bogosort;
 
 interface
 uses index;
+type TIntegerArray = Array of Integer;
 function Sort(arrInput: TIntegerArray): TIntegerArray;
 
 implementation

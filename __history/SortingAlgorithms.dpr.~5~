@@ -3,8 +3,7 @@ program SortingAlgorithms;
 uses
   Forms,
   index in 'index.pas' {Form2},
-  Bogosort in 'Algorithms\Bogosort.pas',
-  translater in 'Algorithms\translater.pas';
+  Bogosort in 'Algorithms\Bogosort.pas';
 
 {$R *.res}
 

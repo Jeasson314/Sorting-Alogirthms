@@ -391,20 +391,6 @@ object Form2: TForm2
       00260430000000000000C08400060000000000009810C0000000000000001302
       180000000000006022BEF4F4A20F7F52CB0000000049454E44AE426082}
   end
-  object lblArrMax: TLabel
-    Left = 144
-    Top = 85
-    Width = 122
-    Height = 13
-    Caption = 'Max amt of sort attempts'
-  end
-  object Label1: TLabel
-    Left = 144
-    Top = 29
-    Width = 121
-    Height = 13
-    Caption = 'Length of unsorted array'
-  end
   object btnLoad: TButton
     Left = 8
     Top = 48
@@ -424,6 +410,8 @@ object Form2: TForm2
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    Lines.Strings = (
+      'redout')
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 1
@@ -454,15 +442,5 @@ object Form2: TForm2
     MinValue = 0
     TabOrder = 4
     Value = 0
-  end
-  object spnSortMax: TSpinEdit
-    Left = 144
-    Top = 104
-    Width = 121
-    Height = 22
-    MaxValue = 0
-    MinValue = 0
-    TabOrder = 5
-    Value = 100
   end
 end

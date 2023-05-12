@@ -60,8 +60,6 @@ procedure TForm2.btnLoadClick(Sender: TObject);
 var iLoop : Integer;
 begin
   SetLength(arrValues, spnLength.Value);
-  redout.Clear;
-  redout.Lines.Add('Original array is as follows: ');
   for iLoop := 0 to length(arrValues)-1 do
    BEGIN
     arrValues[iLoop] := Random(100);
@@ -161,7 +159,7 @@ begin
   sTemp:= (IntToStr(i)+': '+printa(a));
   Form2.redout.Lines.Add(sTemp);
   Form2.redout.Perform( EM_SCROLL, SB_LINEDOWN, 0);
-  while not sorted(a) AND (i < Form2.spnSortMax.Value) do begin
+  while not sorted(a) AND (i < Form2.spnSortMax) do begin
     shuffle(a);
     i := i + 1;
     sTemp:= (IntToStr(i)+': '+printa(a));
